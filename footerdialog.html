@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/ip.footerdialog.js"></script>
+    <link href="css/ip.footerdialog.css" rel="stylesheet" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            showFooterDialog(document.body);
+
+        });
+
+
+        function showFooterDialog(relativeTo) {
+            $(relativeTo).ip_FooterDialog({ Message: 'I am a footer dialog!' });
+        }
+
+    </script>
+
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+            background-color: #3d3d3d;
+            margin: 0;
+            padding: 60px;
+        }
+
+        a { color:#46b3ff; text-decoration:dotted; }
+        .button{ border:none; color:black;  min-width:200px; padding:10px; text-align:center; cursor:pointer; margin-bottom:1px;margin-top:auto; }
+        .green-bg{ background-color:#2fad75; }
+        .pink-bg{ background-color:#e73565; }
+        .orange-bg{ background-color:#f97848; }
+        .blue-bg{ background-color:#3574a0; }
+        #demoContainer{ display:table-cell; width:350px; height:350px; border:dashed 2px black; position:relative;text-align:center; vertical-align: middle; }
+    
+    </style>
+    
+
+    
+    <title>ip.footerdialog demo</title>
+
+</head>
+<body>
+
+    <h1>Footer Dialog Demo</h1>
+    <p>Click a button to demo the footer dialog</p>    
+    <div id="demoContainer">
+        <input type="button" class="button pink-bg" onclick="showFooterDialog(document.body)" value="Show Dialog (Window)">
+        <input type="button"  class="button orange-bg" onclick="showFooterDialog('#demoContainer')" value="Show Dialog (Div)" />
+    </div>
+    <p>For more usage examples and documentation please <a href="http://www.inspireproduction.co.za/ip.html#/demo-ui/footerdialog">click here</a>.</p>
+</body>
+</html>
